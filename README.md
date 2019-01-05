@@ -23,3 +23,9 @@ Make a simple database of users. User should be able to add users to database an
 
 ### 8
 User should be able to see the table of users and delete some of them
+
+### 9
+Use bootstrap for styling
+
+### 10
+Save data in localstorage
