@@ -11,6 +11,17 @@
     <input type="number" name="age" placeholder="Age" min="0" max="120" id="age">
     <input type="submit" name="submit" value="Submit">
   </form>
+  <table>
+    <thead>
+      <tr>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody id="users"></tbody>
+  </table>
   
   <script type="text/javascript">
     let users = [];
@@ -20,6 +31,7 @@
       users.push(user);
       console.table(users);
       clearForm();
+      setUsers();
     };
 
     let clearForm = function(){
@@ -35,6 +47,19 @@
       user.age = parseInt(form.elements["age"].value);
       return user;
     }
+    let setUsers = function(){
+      let content = "";
+      users.forEach(function(user, index, array) {
+        let userContent = `<tr><td>${user.firstname}</td><td>${user.lastname}</td><td>${user.age}</td><td><button onclick="deleteUser(${index})">delete</button></td></tr>`
+        content += userContent;
+      });
+      document.getElementById("users").innerHTML = content;
+    }
+    let deleteUser = function(index){
+      users.splice(index, 1);
+      setUsers()
+    }
+
   </script>
 </body>
 </html>
