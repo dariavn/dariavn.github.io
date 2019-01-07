@@ -40,11 +40,10 @@
   </table>
   
   <script type="text/javascript">
-    let users = [];
-
     let formHandler = function(){
       let user = getUser();
       users.push(user);
+      saveUsersToLocalStorage();
       console.table(users);
       clearForm();
       setUsers();
@@ -73,9 +72,20 @@
     }
     let deleteUser = function(index){
       users.splice(index, 1);
-      setUsers()
+      saveUsersToLocalStorage();
+      setUsers();
+    }
+    let saveUsersToLocalStorage = function(){
+      let JSONUsers = JSON.stringify(users);
+      localStorage.setItem("users", JSONUsers);
     }
 
+    let users = JSON.parse(localStorage.getItem("users"))
+    if (users !== null) {
+      setUsers();
+    } else {
+      users = []
+    }
   </script>
 </body>
 </html>
