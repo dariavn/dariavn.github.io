@@ -50,6 +50,7 @@
     height: 100%;
     font-family: 'Bangers', cursive;
     font-size: 10vw;
+    padding-left: 30px;
 }
 
 body {
@@ -58,10 +59,22 @@ body {
     margin: 0;
 }
 
-.center {
+.flowers {
+    color: orange;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-family: 'Bangers', cursive;
+    font-size: 5vw;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.arms {
+    display: block;
+    
+    
 }
 
 .author {
