@@ -48,7 +48,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    font-family: 'Bangers', cursive;
+    font-family: 'Bangers';
     font-size: 10vw;
     padding-left: 30px;
 }
@@ -61,6 +61,7 @@ body {
 
 .wrapper { 
     display:flex; 
+    flex-direction: column;
     justify-content:space-between;
     border: 1px solid orange;
     font-family: 'Bangers';
@@ -68,18 +69,34 @@ body {
     margin-top: 40px;
 }
 
+@media all and (min-width: 600px) {
+    .wrapper { 
+        flex-direction: row;
+    }
+}
+
+
 .box { 
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     height: 100%; 
     text-align:center; 
     border: 1px solid orange;
     height: 300px;
-    font-family: 'Bangers';
+    font-family: 'Gill Sans';
     padding: 0 60px;
-    font-size: 30px;
-    color: orange;
+    font-size: 24px;
+    color: rgba(41, 60, 49, 0.854);
     background: rgba(255, 255, 255, 0.7);
+}
+
+.box h2 {
+    margin: 0;
+    margin-top: 15px;
 }
 
 .box img {
@@ -92,6 +109,45 @@ body {
     z-index: -1;
 }
 
+.box button {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    margin-bottom: 15px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.box button:after {
+    content: "";
+    background-color: orange;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .box button:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+  
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
 
 .author {
     margin-top: 50px;
