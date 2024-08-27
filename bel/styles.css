@@ -190,15 +190,21 @@ body {
 .author {
     margin-top: 50px;
     margin-left: 20px;
+    font-family: Verdana, sans-serif;
+    color: rgba(41, 60, 49, 0.854);
 }
 
 
 .teacher {
     margin-left: 20px;
+    font-family: Verdana, sans-serif;
+    color: rgba(41, 60, 49, 0.854);
 }
 
 strong {
     text-align: left;
     font-size: 15px;
+    font-family: Verdana, sans-serif;
+    color: rgba(41, 60, 49, 0.854);
 }
 
