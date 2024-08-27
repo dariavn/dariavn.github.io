@@ -59,10 +59,9 @@ body {
     margin: 0;
 }
 
-.wrapper { 
-    display:flex; 
-    flex-direction: column;
-    justify-content:space-between;
+.wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     border: 1px solid orange;
     font-family: 'Bangers';
     font-size: 10px;
@@ -70,8 +69,8 @@ body {
 }
 
 @media all and (min-width: 600px) {
-    .wrapper { 
-        flex-direction: row;
+    .wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -87,9 +86,9 @@ body {
     text-align:center; 
     border: 1px solid orange;
     height: 300px;
-    font-family: 'Gill Sans';
-    padding: 0 60px;
-    font-size: 24px;
+    font-family: Verdana, sans-serif;
+    padding: 20px 60px;
+    font-size: 22px;
     color: rgba(41, 60, 49, 0.854);
     background: rgba(255, 255, 255, 0.7);
 }
@@ -115,7 +114,7 @@ body {
     font-weight: 200;
     letter-spacing: 1px;
     padding: 13px 20px 13px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     outline: 0;
     border: 1px solid black;
     cursor: pointer;
@@ -169,6 +168,8 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center; 
+    font-family: Georgia, serif;
   }
   
   /* The Close Button */
